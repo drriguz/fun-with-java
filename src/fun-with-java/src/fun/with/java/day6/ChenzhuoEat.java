@@ -1,8 +1,8 @@
 package fun.with.java.day6;
 
-public class ChenzhuoEat {
+public class ChenzhuoEat implements IEat{
 	public void eatSomething(Object something) 
-			throws Exception {
+			 {
 		System.out.println("*****************");
 		Exception e = new Exception();
 		

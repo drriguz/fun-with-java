@@ -3,24 +3,16 @@ package fun.with.java.day6;
 public class EatApp {
 
 	public static void main(String[] args) {
-		String config = "zhangyi";
-		IEat eat = null;
-		try{
-			eat.eatSomething("xx");
-		}
-		catch(NullPointerException e){
-			System.out.println("______");
-			e.printStackTrace();
-		}
+		String config = "fun.with.java.day6.ChenzhuoEat";
 		try {
-			Class c = Class.forName("fun.with.java.day6.ZhangyiEat");
-			c.newInstance();
-
+			Class c = Class.forName(config);
+			Object inst = c.newInstance();
+			IEat e = (IEat)inst;
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
 			e.printStackTrace();
 		}
 
-		Class c1 = MyClass.forName("fun.with.java.day6.ZhangyiEat"); 
+		//eat.eatSomething("xx");
 	}
 
 }
